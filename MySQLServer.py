@@ -11,7 +11,14 @@ def create_database():
             user="root",
             password="Mimiene/4452"
         )
-        
+    try:
+        # Connect to MySQL server (NOT a specific database)
+        connection = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="your_password_here"   # Replace with your MySQL password
+        )
+            
         cursor = connection.cursor()
         cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
         print("Database 'alx_book_store' created successfully!")
