@@ -1,4 +1,5 @@
 # MySQLServer.py
+import mysql.connector
 import pymysql
 
 def create_database():
