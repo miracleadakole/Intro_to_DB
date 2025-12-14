@@ -3,7 +3,7 @@
 USE alx_book_store;
 
 
-CREATE TABLE authors (
+CREATE TABLE Authors (
     author_id INT PRIMARY KEY,
     author_name VARCHAR(255) NOT NULL,
 );
@@ -11,7 +11,7 @@ CREATE TABLE authors (
 -----------------------------------------------
 -- TABLE: books
 -----------------------------------------------
-CREATE TABLE books (
+CREATE TABLE Books (
     book_id INT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     author_id INT NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE books (
 -----------------------------------------------
 -- TABLE: customers
 -----------------------------------------------
-CREATE TABLE customers (
+CREATE TABLE Customers (
     customer_id INT PRIMARY KEY,
     customer_name VARCHAR(255) NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE customers (
 -----------------------------------------------
 -- TABLE: orders
 -----------------------------------------------
-CREATE TABLE orders (
+CREATE TABLE Orders (
     order_id INT  PRIMARY KEY,
     customer_id INT NOT NULL,
     order_date DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -46,7 +46,7 @@ CREATE TABLE orders (
 -----------------------------------------------
 -- TABLE: order_details
 -----------------------------------------------
-CREATE TABLE order_details (
+CREATE TABLE Order_details (
     order_detail_id INT  PRIMARY KEY,
     order_id INT NOT NULL,
     book_id INT NOT NULL,
