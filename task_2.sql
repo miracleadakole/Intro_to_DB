@@ -40,7 +40,7 @@ CREATE TABLE Orders (
     customer_id INT NOT NULL,
     order_date DATETIME DEFAULT CURRENT_TIMESTAMP,
     total_amount DECIMAL(10,2),
-    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 );
 
 -----------------------------------------------
@@ -53,5 +53,5 @@ CREATE TABLE Order_details (
     quantity INT NOT NULL DEFAULT 1,
     price DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (order_id) REFERENCES orders(order_id),
-    FOREIGN KEY (book_id) REFERENCES books(book_id)
+    FOREIGN KEY (book_id) REFERENCES Books(book_id)
 );
