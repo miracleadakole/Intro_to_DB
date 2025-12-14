@@ -47,11 +47,10 @@ CREATE TABLE Orders (
 -- TABLE: order_details
 -----------------------------------------------
 CREATE TABLE Order_details (
-    order_detail_id INT  PRIMARY KEY,
+    orderdetailid INT  PRIMARY KEY,
     order_id INT NOT NULL,
     book_id INT NOT NULL,
-    quantity INT NOT NULL DEFAULT 1,
-    price DECIMAL(10,2) NOT NULL,
-    FOREIGN KEY (order_id) REFERENCES orders(order_id),
-    FOREIGN KEY (book_id) REFERENCES Books(book_id)
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+    FOREIGN KEY (book_id) REFERENCES Books(book_id),
+    quantity DECIMAL(10,2),
 );
